@@ -45,26 +45,31 @@ public class MainActivity extends AppCompatActivity {
      * @param view view calling the method
      */
     public void showApp(View view) {
-        String clickedStr = ((Button)view).getText().toString();
-
-        if (clickedStr.equalsIgnoreCase(getString(R.string.spotify_streamer))) {
-            Toast.makeText(getApplicationContext(), getString(R.string.msg_spotify_streamer),
-                    Toast.LENGTH_SHORT).show();
-        } else if (clickedStr.equalsIgnoreCase(getString(R.string.scores_app))) {
-            Toast.makeText(getApplicationContext(), getString(R.string.msg_scores_app),
-                    Toast.LENGTH_SHORT).show();
-        } else if (clickedStr.equalsIgnoreCase(getString(R.string.library_app))) {
-            Toast.makeText(getApplicationContext(), getString(R.string.msg_library_app),
-                    Toast.LENGTH_SHORT).show();
-        } else if (clickedStr.equalsIgnoreCase(getString(R.string.build_bigger))) {
-            Toast.makeText(getApplicationContext(), getString(R.string.msg_build_bigger),
-                    Toast.LENGTH_SHORT).show();
-        } else if (clickedStr.equalsIgnoreCase(getString(R.string.xyz_reader))) {
-            Toast.makeText(getApplicationContext(), getString(R.string.msg_xyz_reader),
-                    Toast.LENGTH_SHORT).show();
-        } else if (clickedStr.equalsIgnoreCase(getString(R.string.own_app))) {
-            Toast.makeText(getApplicationContext(), getString(R.string.msg_own_app),
-                    Toast.LENGTH_SHORT).show();
+         switch(view.getId()) {
+            case R.id.btnSpotify:
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_spotify_streamer),
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnScores:
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_scores_app),
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnLibrary:
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_library_app),
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnBigger:
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_build_bigger),
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnReader:
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_xyz_reader),
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnCapstone:
+                Toast.makeText(getApplicationContext(), getString(R.string.msg_own_app),
+                        Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 }
